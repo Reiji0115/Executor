@@ -1,92 +1,82 @@
-#include "SceneMain.h"
-#include "DxLib.h"
-#include "Game.h"
+﻿#include<DxLib.h>
+#include"SceneMain.h"
+#include"Player.h"
+#include"Input.h"
+#include"Collision.h"
+#include"Game.h"
 
-namespace
+constexpr int guard_result_frame = 120;//ガード結果を表示するフレーム数(約2秒)
+constexpr float boss_attack_radius = 25.0f;//仮のボス攻撃の半径
+constexpr float boss_attack_floor_offset = 40.0f;//仮のボス攻撃の画面下端からの高さ
+constexpr float boss_attack_label_offset_x = 45.0f;//「BOSS ATTACK」の表示位置(円の中心から左へ)
+constexpr float boss_attack_label_offset_y = 10.0f;//「BOSS ATTACK」の表示位置(円の中心から上へ)
+constexpr int debug_line_height = 16;//デバッグ文字列１行の高さ
+
+SceneMain::SceneMain() :
+	player_(std::make_shared<Player>()),
+	bossAttack_({ { static_cast<float>(Game::kScreenWidth) / 2.0f,
+		static_cast<float>(Game::kScreenHeight) - boss_attack_floor_offset },
+		boss_attack_radius })
 {
-	constexpr int kParrySuccessDuration = 120; // パリィ成功状態を表示するフレーム数（約2秒）
 }
 
-SceneMain::SceneMain():
-	m_frameCount(0)
+void SceneMain::Update(Input& input)
 {
-}
+	++frame_;
+	player_->Update(input);
 
-SceneMain::~SceneMain()
-{
-}
-
-void SceneMain::Init()
-{
-	m_frameCount = 0;
-	m_player.Init();
-	m_bossAttackCollision = {
-		static_cast<float>(Game::kScreenWidth / 2 ),
-		static_cast<float>(Game::kScreenHeight -40.0f),
-		25.0f};
-	m_parrySucceeded = false;
-	m_parrySuccessTimer = 0;
-}
-
-void SceneMain::End()
-{
-	m_player.End();
-}
-
-void SceneMain::Update()
-{
-	m_frameCount++;
-	m_player.Update();
-
-	if (m_parrySucceeded)
-	{
-		--m_parrySuccessTimer;
-
-		if (m_parrySuccessTimer <= 0)
-		{
-			m_parrySucceeded = false;
+	//結果表示中は次の判定をしない(当たりっぱなしで毎フレーム成功にならないように)
+	if (guardResultFrame_ > 0) {
+		if (--guardResultFrame_ <= 0) {
+			guardResult_ = GuardResult::none;
 		}
+		return;
 	}
 
-	if (m_player.IsParrying() && !m_parrySucceeded)
-	{
-		const Circle parryCircle = m_player.GetParryCollision(); // プレイヤーの前方にある弾き判定
-
-		if (Collision::IsCircleHit(parryCircle, m_bossAttackCollision))
-		{
-			m_parrySucceeded = true;
-			m_parrySuccessTimer = kParrySuccessDuration;
-			printfDx("[PARRY SUCCESS] Boss attack was parried. Frame: %d\n", m_frameCount);
-		}
+	if (!Collision::IsCircleHit(player_->GetGuardCircle(), bossAttack_)) {
+		return;
+	}
+	if (player_->IsJustGuarding()) {
+		guardResult_ = GuardResult::just;
+		guardResultFrame_ = guard_result_frame;
+	}
+	else if (player_->IsGuarding()) {
+		guardResult_ = GuardResult::guard;
+		guardResultFrame_ = guard_result_frame;
 	}
 }
 
 void SceneMain::Draw()
 {
-	DrawString(0, 0, "SceneMain", GetColor(255, 255, 255));
-	DrawFormatString(0, 16, GetColor(255, 255, 255), "FRAME:%d", m_frameCount);
-	DrawFormatString(0, 32, GetColor(255, 255, 255), "X:%d Y:%d", m_player.GetX(), m_player.GetY());
-	DrawString(0, 48, "Z: Parry", GetColor(255, 255, 255));
+	const unsigned int white = GetColor(255, 255, 255);
+	const auto& playerPos = player_->GetPosition();
+	DrawString(0, 0, "SceneMain", white);
+	DrawFormatString(0, debug_line_height, white, "FRAME:%d", frame_);
+	DrawFormatString(0, debug_line_height * 2, white, "X:%d Y:%d",
+		static_cast<int>(playerPos.x), static_cast<int>(playerPos.y));
+	DrawString(0, debug_line_height * 3, "Parry:R1/Z  Jump:Cross/Space  Move:Stick/Arrow", white);
 
-	if (m_parrySucceeded)
-	{
-		DrawString(0, 64, "[PARRY SUCCESS]", GetColor(0, 255, 0));
+	unsigned int bossAttackColor = GetColor(255, 0, 0);
+	switch (guardResult_) {
+	case GuardResult::just:
+		DrawString(0, debug_line_height * 4, "[JUST GUARD]", GetColor(0, 255, 255));
+		bossAttackColor = GetColor(0, 255, 255);
+		break;
+	case GuardResult::guard:
+		DrawString(0, debug_line_height * 4, "[GUARD]", GetColor(0, 100, 255));
+		bossAttackColor = GetColor(0, 100, 255);
+		break;
+	default:
+		break;
 	}
 
-	const int bossAttackColor =
-		m_parrySucceeded ? GetColor(0, 255, 0) : GetColor(255, 0, 0); // 仮攻撃の表示色
+	DrawCircle(static_cast<int>(bossAttack_.pos.x),
+		static_cast<int>(bossAttack_.pos.y),
+		static_cast<int>(bossAttack_.radius),
+		bossAttackColor, true);
+	DrawString(static_cast<int>(bossAttack_.pos.x - boss_attack_label_offset_x),
+		static_cast<int>(bossAttack_.pos.y - boss_attack_label_offset_y),
+		"BOSS ATTACK", white);
 
-	DrawCircle(
-		static_cast<int>(m_bossAttackCollision.x),
-		static_cast<int>(m_bossAttackCollision.y),
-		static_cast<int>(m_bossAttackCollision.radius),
-		bossAttackColor,
-		TRUE);
-	DrawString(
-		static_cast<int>(m_bossAttackCollision.x - 45.0f),
-		static_cast<int>(m_bossAttackCollision.y - 10.0f),
-		"BOSS ATTACK",
-		GetColor(255, 255, 255));
-
-	m_player.Draw();
+	player_->Draw();
 }

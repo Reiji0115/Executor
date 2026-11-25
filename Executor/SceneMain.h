@@ -1,24 +1,34 @@
-#pragma once
-#include "Player.h"
-#include "Collision.h"
+﻿#pragma once
+#include<memory>
+#include"Geometry.h"
 
+class Player;
+class Input;
+
+/// <summary>
+/// ゲーム本編のシーン(仮)
+/// TODO:Scene/SceneControllerを作ったらGameSceneとして作り直す
+/// </summary>
 class SceneMain
 {
+private:
+	/// <summary>
+	/// 仮のボス攻撃を受けたときの結果
+	/// </summary>
+	enum class GuardResult {
+		none,//結果なし
+		just,//ジャストガード成功
+		guard,//通常ガード
+	};
+
+	int frame_ = 0;//経過フレーム数
+	std::shared_ptr<Player> player_;//プレイヤー
+	Circle bossAttack_ = {};//仮のボス攻撃の円形当たり判定
+	GuardResult guardResult_ = GuardResult::none;//直前のガード結果
+	int guardResultFrame_ = 0;//ガード結果表示の残りフレーム数
 public:
 	SceneMain();
-	~SceneMain();
 
-	void Init();
-	void End();
-
-	void Update();
+	void Update(Input& input);
 	void Draw();
-
-private:
-	int m_frameCount;
-	Player m_player;
-	Circle m_bossAttackCollision; // 仮のボス攻撃の円形当たり判定
-	bool m_parrySucceeded; // パリィに成功したかどうか
-	int m_parrySuccessTimer; // パリィ成功表示の残りフレーム数
 };
-

@@ -1,25 +1,18 @@
-﻿#include "Collision.h"
-#include <cmath>
+﻿#include"Collision.h"
 
 bool Collision::IsCircleHit(const Circle& first, const Circle& second)
 {
-	const float distanceX = first.x - second.x; // 二つの円の中心のX座標の差
-
-	const float distanceY = first.y - second.y; // 二つの円の中心のY座標の差
-	
-	const float distanceSquared = distanceX * distanceX + distanceY * distanceY;
-	
 	const float radiusSum = first.radius + second.radius;
-	
-	return distanceSquared <= radiusSum * radiusSum;
+	//平方根の計算を避けるため、距離の２乗と半径の和の２乗で比べる
+	return (first.pos - second.pos).SqLength() <= radiusSum * radiusSum;
 }
 
-bool Collision::IsRectangleHit(const CollisionRectangle& first, const CollisionRectangle& second)
+bool Collision::IsRectangleHit(const CollisionRectangle&, const CollisionRectangle&)
 {
 	return false;
 }
 
-bool Collision::IsCircleRectangleHit(const Circle& circle, const CollisionRectangle& rectangle)
+bool Collision::IsCircleRectangleHit(const Circle&, const CollisionRectangle&)
 {
 	return false;
 }
