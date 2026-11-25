@@ -1,25 +1,47 @@
-﻿  Actor.cpp
-  Collision.cpp
+﻿  Input.cpp
   main.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneMain.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\PC_USER\Documents\Executor\Executor\SceneMain.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'main.cpp' をコンパイルしています)
   
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\PC_USER\Documents\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'main.cpp' をコンパイルしています)
   
-  Player.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Player.cpp' をコンパイルしています)
+  Scene.cpp
+C:\Users\PC_USER\Documents\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'Scene.cpp' をコンパイルしています)
   
-  SceneMain.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneMain.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneMain.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'SceneMain.cpp' をコンパイルしています)
+  SceneController.cpp
+C:\Users\PC_USER\Documents\Executor\Executor\SceneController.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\PC_USER\Documents\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'SceneController.cpp' をコンパイルしています)
   
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'SceneMain.cpp' をコンパイルしています)
+C:\Users\PC_USER\Documents\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'SceneController.cpp' をコンパイルしています)
+  
+  TitleScene.cpp
+C:\Users\PC_USER\Documents\Executor\Executor\TitleScene.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+C:\Users\PC_USER\Documents\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
+  
+C:\Users\PC_USER\Documents\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
+  
+C:\Users\PC_USER\Documents\Executor\Executor\SceneMain.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
+  
+C:\Users\PC_USER\Documents\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
+  
+C:\Users\PC_USER\Documents\Executor\Executor\TitleScene.cpp(15,12): error C2039: 'IsTriggered': 'Input' のメンバーではありません
+      C:\Users\PC_USER\Documents\Executor\Executor\Input.h(2,7):
+      'Input' の宣言を確認してください
+  
+C:\Users\PC_USER\Documents\Executor\Executor\TitleScene.cpp(17,15): error C2664: 'void SceneController::ChangeScene(std::shared_ptr<Scene>)': 引数 1 を 'std::shared_ptr<SceneMain>' から 'std::shared_ptr<Scene>' へ変換できません。
+      C:\Users\PC_USER\Documents\Executor\Executor\TitleScene.cpp(17,54):
+      この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
+      C:\Users\PC_USER\Documents\Executor\Executor\SceneController.h(25,7):
+      'SceneController::ChangeScene' の宣言を確認してください
+      C:\Users\PC_USER\Documents\Executor\Executor\TitleScene.cpp(17,15):
+      引数リスト '(std::shared_ptr<SceneMain>)' を一致させようとしているとき
   
   コードを生成中...
-  LINK : 前回のインクリメンタル リンクで C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\x64\Debug\Executor.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
-  Executor.vcxproj -> C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\x64\Debug\Executor.exe
