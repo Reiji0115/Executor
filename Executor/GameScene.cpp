@@ -12,11 +12,16 @@ constexpr float boss_attack_floor_offset = 40.0f;//仮のボス攻撃の画面�
 
 GameScene::GameScene(SceneController& controller) :
 	Scene(controller),
-	player_(std::make_shared<Player>()),
-	bossAttack_({ static_cast<float>(Application::GetWindowSize()) / 2.0f,
-		static_cast<float>(Application::GetWindowSize()) - boss_attack_floor_offset,
-		boss_attack_radius })
+	player_(std::make_shared<Player>())
 {
+	//長い呼び出しを何度も書かないように、一度だけ取り出しておく(読むだけなのでconst auto&)
+	const auto& wsize =
+		Application::GetInstance().GetWindowSize();
+	bossAttack_ = { static_cast<float>(wsize.w) / 2.0f,
+		static_cast<float>(wsize.h) -
+		boss_attack_floor_offset,
+		boss_attack_radius };
+
 	//シーンが作られた＝ゲーム開始なので、ここでプレイヤーを初期化する
 	player_->Init();
 }

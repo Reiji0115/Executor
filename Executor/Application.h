@@ -5,8 +5,8 @@
 /// </summary>
 struct Size
 {
-	int screenwidth = 0; //画面の横幅
-	int screenheight = 0; //画面の縦幅
+	int w = 0; //画面の横幅
+	int h = 0; //画面の縦幅
 };
 /// <summary>
 /// アプリケーション全体を管理するシングルトンクラス

@@ -1,7 +1,7 @@
 #include "DxLib.h"
 #include <cmath>
 #include "Player.h"
-#include "Game.h"
+#include "Application.h"
 
 namespace
 {
@@ -17,8 +17,10 @@ namespace
 
 void Player::Init()
 {
-	m_playerX = static_cast<float>(Game::kScreenWidth) / 2.0f;
-	m_playerY = static_cast<float>(Game::kScreenHeight) / 2.0f;
+	const auto& wsize =
+		Application::GetInstance().GetWindowSize();
+	const float floorY = static_cast<float>
+		(wsize.h - kPlayerHalfSize);
 	m_playerVelocityX = 0.0f;
 	m_playerVelocityY = 0.0f;
 	m_facingDirection = 1;
@@ -125,7 +127,8 @@ void Player::Update()
 	m_playerVelocityY += kGravity;
 	m_playerY += static_cast<int>(m_playerVelocityY);
 
-	const float floorY = Game::kScreenHeight - kPlayerHalfSize;
+	const auto& wsize =
+		Application::GetInstance().GetWindowSize();
 	if (m_playerY >= floorY)
 	{
 		m_playerY = static_cast<int>(floorY);

@@ -25,7 +25,7 @@ Application& Application::GetInstance()
 bool Application::Init()
 {
 	ChangeWindowMode(true);//ウィンドウモードで起動
-	SetGraphMode(windowSize_.screenwidth, windowSize_.screenheight, color_bit_depth);
+	SetGraphMode(windowSize_.w, windowSize_.h, color_bit_depth);
 	SetMainWindowText("Executor");
 	if (DxLib_Init() == -1) {
 		return false;
