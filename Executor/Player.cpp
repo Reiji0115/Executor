@@ -1,7 +1,7 @@
-#include "DxLib.h"
-#include <cmath>
-#include "Player.h"
-#include "Application.h"
+#include"DxLib.h"
+#include<cmath>
+#include"Player.h"
+#include"Application.h"
 
 namespace
 {

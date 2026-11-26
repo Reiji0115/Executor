@@ -1,9 +1,9 @@
-#include <DxLib.h>
-#include <memory>
-#include "GameOverScene.h"
-#include "SceneController.h"
-#include "TitleScene.h"
-#include "Input.h"
+#include<DxLib.h>
+#include<memory>
+#include"GameOverScene.h"
+#include"SceneController.h"
+#include"TitleScene.h"
+#include"Input.h"
 
 GameOverScene::GameOverScene(SceneController& controller):Scene(controller)
 {
@@ -14,7 +14,7 @@ void GameOverScene::Update(Input& input)
 	if (input.IsTriggered("ok")) {
 		controller_.ChangeScene(std::make_shared<TitleScene>(controller_));
 
-		return;
+		return;//ChangeSceneの後は自分が消えているので、すぐにreturnする
 	}
 }
 

@@ -35,7 +35,6 @@ void GameScene::Update(Input& input)
 {
 	//シーン遷移の確認用。Gキーでゲームオーバー画面へ
 	if (input.IsTriggered("debug_gameover")) {
-		//GameOverSceneを作ったら、下の2行のコメントを外す
 		controller_.ChangeScene(std::make_shared<GameOverScene>(controller_));
 		return;//ChangeSceneの後は自分が消えているので、すぐにreturnする
 	}

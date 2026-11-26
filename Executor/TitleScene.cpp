@@ -1,9 +1,9 @@
-#include <DxLib.h>
-#include <memory>
-#include "TitleScene.h"
-#include "SceneController.h"
-#include "GameScene.h"
-#include "Input.h"
+#include<DxLib.h>
+#include<memory>
+#include"TitleScene.h"
+#include"SceneController.h"
+#include"GameScene.h"
+#include"Input.h"
 
 TitleScene::TitleScene(SceneController& controller) : Scene(controller)
 {

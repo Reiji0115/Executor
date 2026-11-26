@@ -1,5 +1,5 @@
-﻿#include "Collision.h"
-#include <cmath>
+﻿#include"Collision.h"
+#include<cmath>
 
 bool Collision::IsCircleHit(const Circle& first, const Circle& second)
 {

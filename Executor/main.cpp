@@ -1,5 +1,5 @@
-﻿#include <DxLib.h>
-#include "Application.h"
+﻿#include<DxLib.h>
+#include"Application.h"
 
 //プログラムは WinMain から始まる
 int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_

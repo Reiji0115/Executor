@@ -1,7 +1,7 @@
 #pragma once
-#include <memory>
-#include "Scene.h"
-#include "Collision.h"
+#include<memory>
+#include"Scene.h"
+#include"Collision.h"
 
 class Player;//shared_ptrでしか使わないので前方宣言
 

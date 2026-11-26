@@ -1,10 +1,10 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\pc_user\\documents\\executor\\executor\\actor.cpp",
+        "Source": "c:\\users\\egamireiji\\documents\\github\\executor\\executor\\actor.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "c:\\users\\pc_user\\documents\\executor\\executor\\actor.h"
+            "c:\\users\\egamireiji\\documents\\github\\executor\\executor\\actor.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

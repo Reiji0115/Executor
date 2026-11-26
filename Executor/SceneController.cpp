@@ -1,5 +1,5 @@
-#include "SceneController.h"
-#include "Scene.h"
+#include"SceneController.h"
+#include"Scene.h"
 
 void SceneController::Update(Input& input)
 {
