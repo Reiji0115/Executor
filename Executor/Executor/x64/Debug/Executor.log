@@ -1,42 +1,4 @@
-﻿  Application.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Application.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Application.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Application.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Input.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Application.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Application.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Application.cpp' をコンパイルしています)
-  
-  GameScene.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\GameScene.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\GameScene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Input.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Application.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'GameScene.cpp' をコンパイルしています)
-  
-  main.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Application.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'main.cpp' をコンパイルしています)
-  
-  Player.cpp
+﻿  Player.cpp
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
@@ -44,8 +6,5 @@ C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Application.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(130,23): error C2653: 'Game': 識別子がクラス名でも名前空間名でもありません。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(130,29): error C2065: 'kScreenHeight': 定義されていない識別子です。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(130,14): error C2737: 'floorY': const オブジェクトを初期化する必要があります
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(133,32): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
-  コードを生成中...
+C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(136,32): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  Executor.vcxproj -> C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\x64\Debug\Executor.exe

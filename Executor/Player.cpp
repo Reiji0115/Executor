@@ -129,6 +129,8 @@ void Player::Update()
 
 	const auto& wsize =
 		Application::GetInstance().GetWindowSize();
+	const float floorY = static_cast<float>(wsize.h -
+		kPlayerHalfSize);
 	if (m_playerY >= floorY)
 	{
 		m_playerY = static_cast<int>(floorY);
