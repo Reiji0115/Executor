@@ -3,7 +3,7 @@
 #include"SceneController.h"
 #include"Input.h"
 #include"Player.h"
-#include"Game.h"
+#include"Application.h"
 //#include"GameOverScene.h"//GameOverSceneを作ったらコメントを外す
 
 constexpr int parry_success_frame = 120;//パリィ成功を表示するフレーム数(約2秒)
@@ -13,8 +13,8 @@ constexpr float boss_attack_floor_offset = 40.0f;//仮のボス攻撃の画面�
 GameScene::GameScene(SceneController& controller) :
 	Scene(controller),
 	player_(std::make_shared<Player>()),
-	bossAttack_({ static_cast<float>(Game::kScreenWidth) / 2.0f,
-		static_cast<float>(Game::kScreenHeight) - boss_attack_floor_offset,
+	bossAttack_({ static_cast<float>(Application::GetWindowSize()) / 2.0f,
+		static_cast<float>(Application::GetWindowSize()) - boss_attack_floor_offset,
 		boss_attack_radius })
 {
 	//シーンが作られた＝ゲーム開始なので、ここでプレイヤーを初期化する

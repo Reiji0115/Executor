@@ -1,6 +1,4 @@
-﻿  Actor.cpp
-  Collision.cpp
-  GameScene.cpp
+﻿  GameScene.cpp
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\GameScene.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\GameScene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'GameScene.cpp' をコンパイルしています)
@@ -17,37 +15,11 @@ C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Input.h(1,1): warning C48
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'GameScene.cpp' をコンパイルしています)
   
-  Input.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Input.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Input.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Input.cpp' をコンパイルしています)
-  
-  main.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\main.cpp(3,10): error C1083: include ファイルを開けません。'SceneMain.h':No such file or directory
+C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\GameScene.cpp(6,9): error C1083: include ファイルを開けません。'Game.h':No such file or directory
   Player.cpp
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
 C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
   (ソース ファイル 'Player.cpp' をコンパイルしています)
   
-  Scene.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'Scene.cpp' をコンパイルしています)
-  
-  SceneController.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneController.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'SceneController.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'SceneController.cpp' をコンパイルしています)
-  
-  TitleScene.cpp
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\TitleScene.cpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Scene.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\SceneController.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'TitleScene.cpp' をコンパイルしています)
-  
-C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\TitleScene.cpp(5,10): error C1083: include ファイルを開けません。'SceneMain.h':No such file or directory
+C:\Users\EgamiReiji\Documents\GitHub\Executor\Executor\Player.cpp(4,10): error C1083: include ファイルを開けません。'Game.h':No such file or directory
   コードを生成中...
