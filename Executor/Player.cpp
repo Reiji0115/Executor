@@ -19,8 +19,8 @@ void Player::Init()
 {
 	const auto& wsize =
 		Application::GetInstance().GetWindowSize();
-	const float floorY = static_cast<float>
-		(wsize.h - kPlayerHalfSize);
+	m_playerX = static_cast<float>(wsize.w) / 2.0f; //画面の中央にプレイヤーを置く
+	m_playerY = static_cast<float>(wsize.h) / 2.0f;
 	m_playerVelocityX = 0.0f;
 	m_playerVelocityY = 0.0f;
 	m_facingDirection = 1;

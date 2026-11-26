@@ -1,10 +1,10 @@
 #include<DxLib.h>
 #include"GameScene.h"
+#include"GameOverScene.h"
 #include"SceneController.h"
 #include"Input.h"
 #include"Player.h"
 #include"Application.h"
-//#include"GameOverScene.h"//GameOverSceneを作ったらコメントを外す
 
 constexpr int parry_success_frame = 120;//パリィ成功を表示するフレーム数(約2秒)
 constexpr float boss_attack_radius = 25.0f;//仮のボス攻撃の半径
@@ -36,8 +36,8 @@ void GameScene::Update(Input& input)
 	//シーン遷移の確認用。Gキーでゲームオーバー画面へ
 	if (input.IsTriggered("debug_gameover")) {
 		//GameOverSceneを作ったら、下の2行のコメントを外す
-		//controller_.ChangeScene(std::make_shared<GameOverScene>(controller_));
-		//return;//ChangeSceneの後は自分が消えているので、すぐにreturnする
+		controller_.ChangeScene(std::make_shared<GameOverScene>(controller_));
+		return;//ChangeSceneの後は自分が消えているので、すぐにreturnする
 	}
 
 	++frame_;
